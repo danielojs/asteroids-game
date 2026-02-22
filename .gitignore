@@ -11,3 +11,7 @@ wheels/
 
 game_state.jsonl
 game_events.jsonl
+
+# Local assignment notes
+assignment.txt
+asteroids.txt

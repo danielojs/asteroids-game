@@ -17,18 +17,18 @@ def main():
     print(f"Screen height: {SCREEN_HEIGHT}")
 
     while True:
-        log_state()
-
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
                 return
 
+        dt = clock.tick(60) / 1000
+        player.update(dt)
+        log_state()
+
         screen.fill("black")
         player.draw(screen)
         pygame.display.flip()
-
-        clock.tick(60)
 
 
 if __name__ == "__main__":
